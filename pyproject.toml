@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "collaborative-generative-rfm"
+version = "0.1.0"
+description = "Dual-view conditioned Riemannian flow matching for collaborative generative recommendation."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "torch>=2.1",
+]
+
+[project.optional-dependencies]
+caption-decoder = [
+  "peft>=0.14",
+  "transformers>=4.57",
+]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+recdiffusion = "recdiffusion.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

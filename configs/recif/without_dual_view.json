@@ -1,0 +1,11 @@
+{
+  "dataset": "RecIF",
+  "variant": "Ours without dual-view conditioning",
+  "transport": "history_conditioned_rfm",
+  "conditioning": {
+    "observed_history": true,
+    "collaborative_evidence": false
+  },
+  "conditional_source_calibration": true,
+  "caption_decoder": "frozen_embedding_conditioned"
+}

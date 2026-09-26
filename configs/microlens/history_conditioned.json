@@ -1,0 +1,11 @@
+{
+  "dataset": "MicroLens",
+  "variant": "History-conditioned Riemannian flow matching",
+  "transport": "history_conditioned_rfm",
+  "conditioning": {
+    "observed_history": true,
+    "collaborative_evidence": false
+  },
+  "conditional_source_calibration": false,
+  "caption_decoder": "frozen_embedding_conditioned"
+}

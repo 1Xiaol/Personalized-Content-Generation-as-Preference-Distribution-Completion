@@ -1,0 +1,11 @@
+{
+  "dataset": "MicroLens",
+  "variant": "Ours",
+  "transport": "dual_view_conditioned_rfm",
+  "conditioning": {
+    "observed_history": true,
+    "collaborative_evidence": true
+  },
+  "conditional_source_calibration": true,
+  "caption_decoder": "frozen_embedding_conditioned"
+}

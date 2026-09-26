@@ -1,0 +1,22 @@
+{
+  "embedding_encoder": "same frozen normalized text encoder for history, targets, and generations",
+  "generated_samples_per_user": "input_defined_and_shared_across_methods",
+  "kernel": "gaussian_rbf",
+  "distance": "chordal_l2_on_unit_sphere",
+  "bandwidth": {
+    "selection": "median_nonzero_distance",
+    "split": "train_items_only",
+    "sampled_distinct_pairs": 500000,
+    "dataset_specific": true
+  },
+  "tau_clust": 0.6900425553321838,
+  "tau_hit": 0.6900425553321838,
+  "target_clustering": "average_linkage_cosine_distance",
+  "future_mode_assignment": "each supported generation is assigned to its globally nearest target only",
+  "mmd_estimator": "unbiased_two_sample",
+  "retain_negative_mmd_estimates": true,
+  "mmd_min_targets": 2,
+  "aggregation": "user_macro",
+  "bootstrap_resamples": 2000,
+  "bootstrap_unit": "user"
+}
